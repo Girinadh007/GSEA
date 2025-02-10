@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="site-title" data-translate="site-title">Government Schemes Eligibility</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js" defer></script>
+    <script src="eligibility.js" defer></script>
+</head>
+<body> 
+    
+    <header>
+        <h1 id="site-title" data-translate="site-title">Government Schemes Eligibility</h1>
+        <div class="language-selector">
+            <label for="language-selector" data-translate="language-selector">Select Language</label>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 id="result-heading" data-translate="result-heading">Please fill your details</h2>
+
+        <form id="eligibility-form">
+            <label for="age" data-translate="age-label">Age</label>
+            <input type="number" id="age" required>
+
+            <label for="occupation" data-translate="occupation-label">Occupation</label>
+            <input type="text" id="occupation" required>
+
+            <label for="income" data-translate="income-label">Income</label>
+            <input type="number" id="income" required>
+
+            <button type="submit" data-translate="submit-button">Check Eligibility</button>
+        </form>
+    </section>
+
+    <script>
+        // Handle form submission
+        document.getElementById("eligibility-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            const userDetails = {
+                age: parseInt(document.getElementById("age").value),
+                occupation: document.getElementById("occupation").value.trim(),
+                income: parseInt(document.getElementById("income").value),
+            };
+
+            // Store user details to be used in eligibility-result.html page
+            localStorage.setItem("userDetails", JSON.stringify(userDetails));
+
+            // Redirect to eligibility results page
+            window.location.href = "eligibility-result.html";
+        });
+
+        // Handle language change
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value;
+            localStorage.setItem("language", selectedLanguage);  // Save the selected language
+            translatePage(selectedLanguage);  // Apply translations based on the selected language
+        });
+    </script>
+</body>
+</html>

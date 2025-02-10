@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="site-title" data-translate="site-title">Eligible Government Schemes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js" defer></script> <!-- Language translation script -->
+    <script src="eligibility-result.js" defer></script> <!-- Script for displaying eligible schemes -->
+</head>
+<body>
+    <header>
+        <h1 id="site-title" data-translate="site-title">Eligible Government Schemes</h1>
+        <div class="language-selector">
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 id="eligibility-heading" data-translate="eligibility-heading">Eligible Schemes for You</h2>
+
+        <!-- Results Section -->
+        <div id="eligibility-result">
+            <div id="schemes-list">
+                <!-- List of schemes will be populated dynamically here -->
+            </div>
+        </div>
+
+        <a href="index.html" class="btn" data-translate="back-home">Back to Home</a>
+    </section>
+
+</body>
+</html>

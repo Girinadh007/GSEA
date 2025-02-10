@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="site-title" data-translate="site-title">Eligible Schemes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js" defer></script>
+    <script src="eligibility.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="site-title" data-translate="site-title">Eligible Schemes</h1>
+        <div class="language-selector">
+            <label for="language-selector" data-translate="language-selector">Select Language</label>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 id="eligibility-message" data-translate="eligibility-message">Eligible Schemes for you</h2>
+        
+        <ul id="eligible-schemes-list">
+            <!-- List of eligible schemes will be populated here -->
+        </ul>
+
+        <button class="btn" onclick="window.location.href='index.html'" data-translate="back-home">Back to Home</button>
+    </section>
+
+    <script>
+        // Handle language change
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value;
+            localStorage.setItem("language", selectedLanguage);  // Save the selected language
+            translatePage(selectedLanguage);  // Apply translations based on the selected language
+        });
+
+        // Function to check eligibility based on user details
+        const schemes = [
+            {
+                name: "Pradhan Mantri Jan Dhan Yojana",
+                ageMin: 18,
+                ageMax: 60,
+                occupation: "Unemployed",
+                incomeMax: 150000,
+                registrationLink: "https://www.pmjdy.gov.in/",
+                instructionsLink: "https://www.pmjdy.gov.in/content/instructions"
+            },
+            {
+                name: "PM Kisan Samman Nidhi",
+                ageMin: 18,
+                ageMax: 75,
+                occupation: "Farmer",
+                incomeMax: 250000,
+                registrationLink: "https://pmkisan.gov.in/",
+                instructionsLink: "https://pmkisan.gov.in/Instructions.aspx"
+            },
+            {
+                name: "Student Scholarship Scheme",
+                ageMin: 18,
+                ageMax: 25,
+                occupation: "Student",
+                incomeMax: 50000,
+                registrationLink: "https://scholarships.gov.in/",
+                instructionsLink: "https://scholarships.gov.in/instructions"
+            }
+        ];
+
+        // Function to display eligible schemes
+        function displayEligibilityResults(userDetails) {
+            const eligibleSchemes = schemes.filter(scheme => {
+                return userDetails.age >= scheme.ageMin &&
+                    userDetails.age <= scheme.ageMax &&
+                    userDetails.occupation.toLowerCase() === scheme.occupation.toLowerCase() &&
+                    userDetails.income <= scheme.incomeMax;
+            });
+
+            const schemesList = document.getElementById("eligible-schemes-list");
+            const eligibilityMessage = document.getElementById("eligibility-message");
+
+            if (eligibleSchemes.length > 0) {
+                eligibilityMessage.textContent = "You are eligible for the following schemes:";
+
+                eligibleSchemes.forEach(scheme => {
+                    const listItem = document.createElement("li");
+                    
+
+                    const schemeName = document.createElement("p");
+                    schemeName.textContent = scheme.name;
+                    listItem.appendChild(schemeName);
+
+                    const applyButton = document.createElement("button");
+                    applyButton.classList.add("btn");
+                    applyButton.textContent = "Apply Here";
+                    applyButton.onclick = () => window.open(scheme.registrationLink, "_blank");
+                    listItem.appendChild(applyButton);
+
+                    
+                    // Create the "View Instructions" button
+                    const instructionsButton = document.createElement("button");
+                    instructionsButton.classList.add("btn");
+                    instructionsButton.textContent = "View Instructions";
+                    instructionsButton.onclick = () => window.open(scheme.instructionsLink, "_blank");
+
+                    listItem.appendChild(instructionsButton);
+                    schemesList.appendChild(listItem);
+                });
+            } else {
+                eligibilityMessage.textContent = "Sorry, you are not eligible for any schemes based on your details.";
+            }
+        }
+
+        // Fetch user details from localStorage and display the results
+        document.addEventListener("DOMContentLoaded", function () {
+            const userDetails = JSON.parse(localStorage.getItem("userDetails"));
+            if (userDetails) {
+                displayEligibilityResults(userDetails);
+            }
+        });
+    </script>
+</body>
+</html>
