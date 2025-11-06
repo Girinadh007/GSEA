@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eligible Schemes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Eligible Schemes</h1>
+    <p>You are eligible for <strong>{{ count }}</strong> schemes.</p>
+
+    {% if eligible_schemes %}
+      {% for scheme in eligible_schemes %}
+        <div class="scheme-card">
+          <h2>{{ scheme.name }}</h2>
+          <p>{{ scheme.description }}</p>
+          <a href="{{ scheme.portal_link }}" target="_blank" class="apply-btn">Apply / More Info</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-result">No eligible schemes found. Please check your details.</p>
+    {% endif %}
+    <a href="/" class="back-btn">← Back</a>
+  </div>
+</body>
+</html>
