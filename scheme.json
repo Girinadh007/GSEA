@@ -446,248 +446,104 @@
     "caste": ["SC", "ST", "OBC"]
   }
 },
+
   {
-    "name": "SMILE – Comprehensive Rehabilitation for Welfare of Transgender Persons",
-    "description": "National umbrella scheme (by Ministry of Social Justice & Empowerment) for transgender persons covering education, health, skill development, shelter, livelihood. :contentReference[oaicite:1]{index=1}",
-    "portal_link": "https://transgender.dosje.gov.in",
-    "domain": "transgender welfare",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 18,
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": false
-    }
-  },
-  {
-    "name": "SMILE Scholarship for Transgender Students",
-    "description": "Scholarship under SMILE scheme for transgender students (IX and above) to help complete education. :contentReference[oaicite:2]{index=2}",
-    "portal_link": "https://transgender.dosje.gov.in/Applicant/Registration/DisplayForm2",
-    "domain": "education",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "student_required": true,
-      "min_age": 14,
-      "area": ["Urban", "Rural"],
-      "max_income": 800000
-    }
-  },
-  {
-    "name": "Garima Greh (Shelter Home for Transgender Persons)",
-    "description": "Shelter homes for destitute/transgender persons covering basic amenities, skill training & rehabilitation. :contentReference[oaicite:3]{index=3}",
-    "portal_link": "https://transgender.dosje.gov.in",
-    "domain": "housing & shelter",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 18,
-      "max_age": 60,
-      "area": ["Urban", "Rural"],
-      "bpl_required": true
-    }
-  },
-  {
-    "name": "Transgender Welfare Pension Scheme (Tamil Nadu)",
-    "description": "Pension and self-employment grant for transgender persons in Tamil Nadu. :contentReference[oaicite:4]{index=4}",
-    "portal_link": "https://www.tn.gov.in",
+    "name": "SMILE - Support for Marginalized Individuals for Livelihood and Enterprise",
+    "description": "Centrally sponsored scheme for transgender persons and beggars providing skill development, education, and shelter.",
+    "portal_link": "https://socialjustice.gov.in",
     "domain": "social welfare",
     "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 40,
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": true
+      "gender": ["Transgender", "Other"],
+      "area": ["Urban", "Rural"]
     }
   },
   {
-    "name": "Sweekruti – Transgender Equality & Justice Scheme (Odisha)",
-    "description": "State-scheme for transgender persons in Odisha covering skill up-gradation, self-employment, health insurance, education. :contentReference[oaicite:5]{index=5}",
-    "portal_link": "https://www.ssid.odisha.gov.in",
-    "domain": "employment & social welfare",
+    "name": "Garima Greh Scheme",
+    "description": "Provides safe shelter homes and social security for transgender individuals.",
+    "portal_link": "https://socialjustice.gov.in",
+    "domain": "housing",
     "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 18,
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": false
+      "gender": ["Transgender", "Other"],
+      "area": ["Urban", "Rural"]
     }
   },
   {
-    "name": "Transgender Welfare Self-Employment Assistance Scheme (Kerala/State)",
-    "description": "Self-employment grant/assistance for transgender persons under state welfare board (training + financial aid). :contentReference[oaicite:6]{index=6}",
-    "portal_link": "https://www.tn.gov.in", 
+    "name": "National Portal for Transgender Persons",
+    "description": "Online application for identity cards and certificates for transgender persons.",
+    "portal_link": "https://transgender.dosje.gov.in",
+    "domain": "identity",
+    "eligibility": {
+      "gender": ["Transgender", "Other"]
+    }
+  },
+  {
+    "name": "Maharashtra Transgender Welfare Board",
+    "description": "Supports skill training, health, and livelihood programs for transgender citizens.",
+    "portal_link": "https://maharashtra.gov.in",
+    "domain": "skill development",
+    "eligibility": {
+      "gender": ["Transgender", "Other"],
+      "area": ["Urban", "Rural"]
+    }
+  },
+  {
+    "name": "Tamil Nadu Transgender Pension Scheme",
+    "description": "Monthly pension for transgender individuals aged above 40 living in Tamil Nadu.",
+    "portal_link": "https://www.tn.gov.in",
+    "domain": "pension",
+    "eligibility": {
+      "gender": ["Transgender", "Other"],
+      "min_age": 40,
+      "area": ["Urban", "Rural"]
+    }
+  },
+  {
+    "name": "Kerala Transgender Policy Implementation",
+    "description": "State-level policy ensuring education, healthcare, and employment rights for transgender people.",
+    "portal_link": "https://kerala.gov.in",
+    "domain": "education",
+    "eligibility": {
+      "gender": ["Transgender", "Other"],
+      "area": ["Urban", "Rural"]
+    }
+  },
+  {
+    "name": "Odisha Transgender Empowerment Scheme",
+    "description": "Grants and training for self-employment and livelihood for transgender individuals.",
+    "portal_link": "https://odisha.gov.in",
+    "domain": "employment",
+    "eligibility": {
+      "gender": ["Transgender", "Other"]
+    }
+  },
+  {
+    "name": "West Bengal Manabik Scheme for Transgender Persons",
+    "description": "Monthly allowance for transgender individuals for basic welfare and dignity.",
+    "portal_link": "https://wb.gov.in",
+    "domain": "social welfare",
+    "eligibility": {
+      "gender": ["Transgender", "Other"],
+      "area": ["Urban", "Rural"]
+    }
+  },
+  {
+    "name": "Telangana Transgender Loan Scheme",
+    "description": "Offers loans to transgender entrepreneurs through self-help groups.",
+    "portal_link": "https://telangana.gov.in",
     "domain": "entrepreneurship",
     "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 18,
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": false
-    }
-  },
-  {
-    "name": "Transgender Health & Affirmation Care Benefit (National)",
-    "description": "Health insurance/benefit coverage for transgender persons including gender affirmation surgeries and hormone therapy under central health scheme. :contentReference[oaicite:7]{index=7}",
-    "portal_link": "https://pmjay.gov.in",
-    "domain": "health",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": false
-    }
-  },
-  {
-    "name": "Transgender Welfare Scheme – Driving & Skill Training (Kerala/State Level)",
-    "description": "Driving licence & vocational training support for transgender persons to help access employment in transport/skills. :contentReference[oaicite:8]{index=8}",
-    "portal_link": "https://www.kerala.gov.in",  
-    "domain": "skill development",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 18,
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": false
-    }
-  },
-  {
-    "name": "Transgender Free Housing & Land Assistance Scheme (State Level)",
-    "description": "State-level housing subsidy / land assistance scheme exclusively for transgender persons (recently announced state govt). :contentReference[oaicite:9]{index=9}",
-    "portal_link": "https://www.egovtschemes.com",  
-    "domain": "housing",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": true
-    }
-  },
-  {
-    "name": "Transgender Reservation & Employment Linkage Scheme (Uttar Pradesh)",
-    "description": "Scheme linking transgender persons to employment opportunities, reserving jobs, skill linking, and financial support. :contentReference[oaicite:10]{index=10}",
-    "portal_link": "https://www.up.gov.in",
-    "domain": "employment",
-    "eligibility": {
-      "gender": ["Transgender"],
-      "min_age": 25,
-      "max_age" : 60,
-      "area": ["Urban", "Rural"],
-      "student_required": false,
-      "bpl_required": false
-      
-    }
-  },
-  [
-  {
-    "name": "SMILE – Support for Marginalized Individuals for Livelihood and Enterprise",
-    "domain": "welfare",
-    "description": "A national program by the Ministry of Social Justice and Empowerment offering skill training, housing, and employment support for transgender persons.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
+      "gender": ["Transgender", "Other"],
       "area": ["Urban", "Rural"]
     }
   },
   {
-    "name": "Garima Greh – Shelter Homes for Transgender Persons",
+    "name": "Delhi Transgender Welfare Scheme",
+    "description": "Provides housing, education, and medical assistance to transgender individuals in Delhi.",
+    "portal_link": "https://delhi.gov.in",
     "domain": "social welfare",
-    "description": "Government-funded shelter homes providing food, healthcare, and vocational training for transgender individuals.",
     "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "Tamil Nadu Transgender Welfare Board Assistance Scheme",
-    "domain": "state welfare",
-    "description": "Tamil Nadu government’s program offering housing, education grants, and monthly pension for transgender citizens.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
-      "state": ["Tamil Nadu"],
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "Kerala Transgender Scholarship Scheme",
-    "domain": "education",
-    "description": "Kerala Social Justice Department’s scholarship for transgender students pursuing secondary or higher education.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 13,
-      "state": ["Kerala"],
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "Maharashtra Transgender Entrepreneurship Scheme",
-    "domain": "skill development",
-    "description": "Financial aid and entrepreneurship training for transgender persons to start self-employment ventures.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 21,
-      "state": ["Maharashtra"],
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "Delhi Transgender Housing Grant Scheme",
-    "domain": "housing",
-    "description": "Delhi government scheme providing financial assistance for transgender individuals to build or buy houses.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 21,
-      "state": ["Delhi"],
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "West Bengal Manabik Scheme (Transgender Inclusion)",
-    "domain": "pension",
-    "description": "Monthly pension for differently-abled and transgender citizens with income below threshold levels.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
-      "state": ["West Bengal"],
-      "area": ["Urban", "Rural"],
-      "differently_abled_required": true
-    }
-  },
-  {
-    "name": "Assam Transgender Financial Support Scheme",
-    "domain": "finance",
-    "description": "Provides one-time financial grants for livelihood and healthcare support to transgender persons in Assam.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
-      "state": ["Assam"],
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "Karnataka Transgender Skill Training Program",
-    "domain": "employment",
-    "description": "Skill development and placement initiative by Karnataka State Women and Child Development Department.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
-      "state": ["Karnataka"],
-      "area": ["Urban", "Rural"]
-    }
-  },
-  {
-    "name": "Odisha Swabhiman Transgender Support Scheme",
-    "domain": "welfare",
-    "description": "Odisha government’s comprehensive support initiative covering education, healthcare, and self-employment for transgender citizens.",
-    "eligibility": {
-      "gender": ["Other"],
-      "min_age": 18,
-      "state": ["Odisha"],
-      "area": ["Urban", "Rural"]
+      "gender": ["Transgender", "Other"],
+      "area": ["Urban"]
     }
   }
 ]
-
-]
-
-
